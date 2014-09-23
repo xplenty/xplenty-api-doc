@@ -3,7 +3,11 @@
 ## Introduction
 
 The Xplenty API provides functions for controlling and monitoring Xplenty clusters and jobs.
-After defining an Xplenty data processing package using the Xplenty web application, you can call the Xplenty API to create Hadoop clusters, run jobs, monitor their progress, and terminate jobs and clusters.
+After defining an Xplenty data processing package using the Xplenty web application, you can call the Xplenty API to:  
+* create Hadoop clusters
+* run jobs 
+* monitor their progress
+* terminate jobs and clusters
 
 You can choose to use the [Xplenty REST API](#RESTSpec), or one of its wrapper [Libraries](#Libraries). 
 
@@ -13,6 +17,7 @@ These are the topics covered on this page:
 * [REST Interface Specifications](#RESTSpec)
 * [Libraries](#Libraries)
 * [Security](#Security)
+* [Collection Resources and Pagination](#Collection)
 * [Rate Limits](#RateLimits)
 * [API Resources](#ApiResources)
 * [Terms of Service](#ToS)
@@ -30,7 +35,7 @@ For a quick overview of how to get started with the Xplenty REST API, you can re
 ## Xplenty Terminology
 </a>
 
-Here are some of the terms you will encounter in the Xplenty API documentation.
+These are some of the terms you will encounter in the Xplenty API documentation.
 
 ### Package
 
@@ -43,11 +48,11 @@ When you call the Xplenty API to run a new job, you supply the name of the packa
 
 ### Cluster 
 
-An Xplenty **cluster** is a Hadoop cluster - a group of machines (nodes) that that is allocated exclusively to your account's users. You can create one or more clusters, and you can run one or more jobs on each cluster. A cluster that you've created remains allocated to your account until it's terminated.
+An Xplenty **cluster** is a Hadoop cluster - a group of machines (nodes) that that is allocated exclusively to your account's users. You can create one or more clusters, and you can run one or more jobs on each cluster. A cluster that you've created remains allocated to your account until you request to terminate the cluster.
 
 ### Account and User
 An Xplenty **account** represents a related group (usually a company) of Xplenty **users**.
-An account is created when the user signs up to use the Xplenty service, and an API key is generated for the account, which must be supplied when calling the Xplenty API.
+An account is created when the user signs up to use the Xplenty service. An API key is generated for the account, which must be supplied when calling the Xplenty API.
 
 <a id="RESTSpec" name="RESTSpec">
 ## REST Interface Specifications
@@ -121,7 +126,7 @@ These are the HTTP status codes that the Xplenty API can return:
 
 **Error Responses**
 
-When the API returns an error messages, it does so in your requested format. For example, an error from a JSON method might look like this:
+When the API returns an error message, it does so in your requested format. For example, an error from a JSON method might look like this:
 
 ```json
 {
@@ -162,20 +167,16 @@ curl -H "Accept: application/vnd.xplenty+json" -u <apikeyhere>: https://api.xple
 ```
 API key authentication works well for personal scripts, but is not recommended for third party services. We plan to deliver OAuth in the near future to provide better granularity and control when providing access to third party services.
 
-### Collection Resources and Pagination
-The response to a GET request for collection resources (e.g. /clusters) may not return all the objects in the collection, depending on how many there are. To query collection resources incrementally, use the following parameters:
+<a id="Collection" name="Collection">
+## Collection Resources and Pagination
+</a>
+
+The response to a GET request for collection resources (e.g. clusters) may not return all the objects in the collection, depending on the number of objects. To query collection resources incrementally, use the following parameters:
 
 * **offset** - the index of the first object to retrieve, starting from 0
 * **limit** - the number of items to return (default is 20, maximum is 100)
 
 Responses to GET requests for collection resources provide information about the total object count available and the offset/limit used for the response, so that you know how many more requests are needed to retrieve the complete list of collection resources.
-
-Alternatively, you can use the **page** parameter, instead of **offset**, as follows:
-
-* **page** - the index of the page to retrieve, starting from 1. A page is a list of collection items, whose length is determined by the "limit" parameter.
-* **limit** - the number of items to return (default is 20, maximum is 100)
-
-The pagination info is included in the [Link header](http://www.w3.org/Protocols/9707-link-header.html).
 
 <a id="RateLimits" name="RateLimits">
 ## Rate Limits
@@ -199,9 +200,6 @@ Every time you call the API, the current rate status will be returned in the res
 ### Cost of API calls
 Unless otherwise noted, an API call deducts 1 credit from your allocation. 
 
-### Errors
-
-**429 Too Many Requests (Rate Limit Exceeded)**
 
 When a client exceeds the allocated rate limit, the Xplenty API returns a "429 Too Many Requests" response with an associated "Rate Limit Exceeded" message as the error description.
 
@@ -250,4 +248,4 @@ Please refer to our [Terms of Service](http://www.xplenty.com/tos) page.
 
 [Representational State Transfer (REST)](http://en.wikipedia.org/wiki/Representational_State_Transfer) 
 
-[Cross-Origin Resource Sharing](http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing)
+[Secure Socket Layer (SSL)](http://en.wikipedia.org/wiki/Secure_Sockets_Layer)
