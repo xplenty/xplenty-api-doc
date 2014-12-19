@@ -10,12 +10,12 @@ The details returned for each schedule are:
 
 ### Input Parameters
 
-|Name|Required?|Default|Description|
-|----|---------|-------|-----------|
-status|N|"all"|Possible values are any status listed above or ```all```. The call will return only schedules with the given status, or all the schedules if the "all" value is specified.
-sort|N|"created"|Possible values are ```updated``` or ```created```. The schedule list will be sorted by the schedules' "updated_by" or "created_by" value respectively.
-direction|N|"desc"|Possible values are: ```asc```, ```desc```. The scheduless will be sorted in ascending or descending order of the "sort" attribute.
-since|N| |The schedule list will only contain schedules updated at the given time or later. The time must be formatted as UTC in the ISO 8601 format: ```YYYY-MM-DDTHH:MM:SSZ```. Example: “2013-01-17T22:41:21Z”.
+| Name      | Required? | Default   | Description                                                                                                                                                                                              |
+| ----      | --------- | -------   | -----------                                                                                                                                                                                              |
+| status    | N         | "all"     | Possible values are any status listed above or ```all```. The call will return only schedules with the given status, or all the schedules if the "all" value is specified.                               |
+| sort      | N         | "created" | Possible values are ```updated``` or ```created```. The schedule list will be sorted by the schedules' "updated_by" or "created_by" value respectively.                                                  |
+| direction | N         | "desc"    | Possible values are: ```asc```, ```desc```. The scheduless will be sorted in ascending or descending order of the "sort" attribute.                                                                      |
+| since     | N         |           | The schedule list will only contain schedules updated at the given time or later. The time must be formatted as UTC in the ISO 8601 format: ```YYYY-MM-DDTHH:MM:SSZ```. Example: “2013-01-17T22:41:21Z”. |
 
 
 ### Request (Curl Call) Syntax
