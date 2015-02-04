@@ -245,7 +245,7 @@ These are the methods supported by the Xplenty API:
 * [List schedules](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/list-schedules.md)
 * [Update schedule](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/update-schedule.md)
 * [Get schedule Information](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/get-schedule-information.md)
-* [Terminate schedule](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/terminate-schedule.md)
+* [Delete schedule](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/delete-schedule.md)
 
 
 <a id="ToS" name="ToS">
