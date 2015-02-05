@@ -44,7 +44,7 @@ time_to_idle|N| |The time interval (in seconds) after which this cluster will be
 
 ### Request (Curl Call) Syntax
 ```shell
-    curl -X PUT -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/clusters/<clusterID>"
+curl -X PUT -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/clusters/<clusterID>"
     -d "cluster[nodes]=4"
     -d "cluster[name]=<clusterName>" 
     -d "cluster[description]=<clusterDescription>"
@@ -53,26 +53,30 @@ time_to_idle|N| |The time interval (in seconds) after which this cluster will be
 ```
 
 ### Response Example
+```HTTP
+HTTP/1.1 200 OK
+```
+
 ```json
-    {
-        "id": 167,
-        "name": "New Cluster",
-        "description": "New Cluster Description",
-        "status": "pending_terminate",
-        "owner_id": 27,
-        "plan_id": null,
-        "nodes": 4,
-        "type": "production",
-        "created_at": "2013-03-03T13:06:51Z",
-        "updated_at": "2013-03-03T14:16:18Z",
-        "available_since": "2013-03-03T13:09:22Z",
-        "terminated_at": null,        
-        "running_jobs_count": 0,
-        "url": "https://api.xplenty.com/xplenation/api/clusters/167",
-        "terminate_on_idle": true,
-        "time_to_idle": 7200,
-        "terminated_on_idle": false,
-        "region": "amazon-web-services::us-east-1",
-        "zone": "us-east-1c"
-    }
+{
+  "id": 167,
+  "name": "New Cluster",
+  "description": "New Cluster Description",
+  "status": "pending_terminate",
+  "owner_id": 27,
+  "plan_id": null,
+  "nodes": 4,
+  "type": "production",
+  "created_at": "2013-03-03T13:06:51Z",
+  "updated_at": "2013-03-03T14:16:18Z",
+  "available_since": "2013-03-03T13:09:22Z",
+  "terminated_at": null,        
+  "running_jobs_count": 0,
+  "url": "https://api.xplenty.com/xplenation/api/clusters/167",
+  "terminate_on_idle": true,
+  "time_to_idle": 7200,
+  "terminated_on_idle": false,
+  "region": "amazon-web-services::us-east-1",
+  "zone": "us-east-1c"
+}
 ```

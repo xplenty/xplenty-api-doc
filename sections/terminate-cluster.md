@@ -35,30 +35,34 @@ The **cluster resource ID** must be supplied at the end of the request URL.
 
 ### Request (Curl Call) Syntax
 ```shell
-    curl -X DELETE -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/clusters/<clusterID>"
+curl -X DELETE -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/clusters/<clusterID>"
 ```
 
 ### Response Example
+```HTTP
+HTTP/1.1 200 OK
+```
+
 ```json
-    {
-        "id": 167,
-        "name": "New Cluster",
-        "description": "New Cluster Description",
-        "status": "pending_terminate",
-        "owner_id": 27,
-        "plan_id": null,
-        "nodes": 1,
-        "type": "sandbox",
-        "created_at": "2013-03-03T13:06:51Z",
-        "updated_at": "2013-03-03T14:16:18Z",
-        "available_since": "2013-03-03T13:09:22Z",
-        "terminated_at": null,        
-        "running_jobs_count": 0,
-        "url": "https://api.xplenty.com/xplenation/api/clusters/167",
-        "terminate_on_idle": false,
-        "time_to_idle": 3600,
-        "terminated_on_idle": false,
-        "region": "amazon-web-services::us-east-1",
-        "zone": "us-east-1b"
-    }
+{
+  "id": 167,
+  "name": "New Cluster",
+  "description": "New Cluster Description",
+  "status": "pending_terminate",
+  "owner_id": 27,
+  "plan_id": null,
+  "nodes": 1,
+  "type": "sandbox",
+  "created_at": "2013-03-03T13:06:51Z",
+  "updated_at": "2013-03-03T14:16:18Z",
+  "available_since": "2013-03-03T13:09:22Z",
+  "terminated_at": null,        
+  "running_jobs_count": 0,
+  "url": "https://api.xplenty.com/xplenation/api/clusters/167",
+  "terminate_on_idle": false,
+  "time_to_idle": 3600,
+  "terminated_on_idle": false,
+  "region": "amazon-web-services::us-east-1",
+  "zone": "us-east-1b"
+}
 ```
