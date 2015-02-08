@@ -45,10 +45,10 @@ zone|N||The zone in which the cluster should be created (for availability zone s
 
 ### Request (Curl Call) Example
 ```shell
-curl -X POST -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/clusters" 
-	-d "cluster[nodes]=4"
-	-d "cluster[type]=production"
-	-d "cluster[name]=<clusterName>" 
+curl -X POST -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/clusters" \
+	-d "cluster[nodes]=4" \
+	-d "cluster[type]=production" \
+	-d "cluster[name]=<clusterName>" \
 	-d "cluster[description]=<clusterDescription>"
 ```
 
