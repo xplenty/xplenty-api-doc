@@ -66,11 +66,11 @@ curl -X POST -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api
 ```
 Add multiple variables for a package and multiple packages. The index is 0 for the first package and incremented for each additional package. For example:
 ```shell
-   -d "schedule[task][packages][0][package_id]=1234" \
-   -d "schedule[task][packages][0][variables][today]='val1'" \
-   -d "schedule[task][packages][0][variables][yesterday]='val2'" \
-   -d "schedule[task][packages][1][package_id]=3456" \
-   -d "schedule[task][packages][1][variables][today]='val3'" \
+   -d "schedule[task][packages][0][package_id]=1234" 
+   -d "schedule[task][packages][0][variables][today]='val1'"
+   -d "schedule[task][packages][0][variables][yesterday]='val2'"
+   -d "schedule[task][packages][1][package_id]=3456"
+   -d "schedule[task][packages][1][variables][today]='val3'"
    -d "schedule[task][packages][1][variables][yesterday]='val4'"
 ```
 
