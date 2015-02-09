@@ -50,7 +50,7 @@ A successful call returns the following details for the schedule after the chang
 
 ### Request (Curl Call) Syntax
 ```shell
-curl -X PUT -H "Accept: application/vnd.xplenty+json" -u <APIkey>: \ "https://api.xplenty.com/<accountID>/api/schedules/<scheduleID>" \
+curl -X PUT -H "Accept: application/vnd.xplenty+json" -u <APIkey>: "https://api.xplenty.com/<accountID>/api/schedules/<scheduleID>" \
   -d "schedule[name]=<name>" \
   -d "schedule[description]=<description>" \
   -d "schedule[status]=enabled" \
