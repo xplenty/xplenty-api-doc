@@ -238,6 +238,7 @@ These are the methods supported by the Xplenty API:
 * [List Jobs](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/list-jobs.md)
 * [Get Job Information](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/get-job-information.md)
 * [Terminate Job](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/terminate-job.md)
+* [Preview Output](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/preview-output.md)
 * [Watch Clusters and jobs](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/watch-clusters-and-jobs.md)
 * [List Packages](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/list-packages.md)
 * [Get Package Information](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/get-package-information.md)
@@ -246,6 +247,7 @@ These are the methods supported by the Xplenty API:
 * [Update schedule](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/update-schedule.md)
 * [Get schedule Information](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/get-schedule-information.md)
 * [Delete schedule](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/delete-schedule.md)
+* [Clone schedule](https://github.com/xplenty/xplenty-api-doc/blob/master/sections/clone-schedule.md)
 
 
 <a id="ToS" name="ToS">
