@@ -1,5 +1,7 @@
 # Xplenty API Specification
 
+**Update:** This API version is now deprecated. Please refer to Xplenty API Version 2 [here](https://github.com/xplenty/xplenty-api-doc-v2).
+
 ## Introduction
 
 The Xplenty API provides functions for controlling and monitoring Xplenty clusters and jobs.
